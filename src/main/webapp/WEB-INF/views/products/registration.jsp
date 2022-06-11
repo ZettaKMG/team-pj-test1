@@ -15,7 +15,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<tag:navBar></tag:navBar>
+	<tag:navBar></tag:navBar>
 
 </body>
 </html>
