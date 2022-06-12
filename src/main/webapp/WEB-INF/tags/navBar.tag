@@ -12,14 +12,6 @@
 	</nav>
 </div>
 
-
-
-
-
-
-
-
-
 <!-- 
 <div class="container-md mt-5">
 	<nav class="nav nav-pills nav-fill">
