@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="tag" tagdir="/WEB-INF/tags"%>
+<%@ taglib prefix="bank" tagdir="/WEB-INF/tags"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
 <title>상품 상세 정보 페이지</title>
 </head>
 <body>
-	<tag:navBar></tag:navBar>
+	<bank:navBar></bank:navBar>
 
 	<div class="container">			
 	    <div class="mt-5">
@@ -28,7 +28,17 @@
 			<table class="table table-borderless">					  
 				<tbody class="table-group-divider">
 					<tr>					
-						<th scope="row"><h4>상품명</h4></th>
+						<th scope="row">
+							<h4>
+								상품명
+								
+								<!-- 편집버튼(권한 있는 유저에게만 보이게끔) -->
+						    	<div class="d-grid gap-2 d-md-flex justify-content-md-end">
+								  <button id="edit_button1" type="button" class="btn btn-warning">편집하기</button>			
+								</div>
+							
+							</h4>
+						</th>
 							<td>
 								<p><strong>000예금 / 000적금</strong></p>							
 							</td>
@@ -67,7 +77,9 @@
 		</div>
 	</div>
 	
-	<%-- 댓글 추가(로그인한 일반 유저 권한 이상에서만 활성화) --%>	
+	<%-- 댓글 관련 항목은 안할 수도 있음 --%>
+	<%-- 댓글 추가(로그인한 일반 유저 권한 이상에서만 활성화) --%>
+	<%--
 	<div class="container mt-5">
 		<div class="row">
 			<div class="col">
@@ -81,8 +93,10 @@
 			</div>
 		</div>
 	</div>	
+	 --%>	
 	
 	<%-- 댓글 목록 --%>
+	<%--
 	<div class="container mt-5">
 		<div class="row">
 			<div class="col">
@@ -97,6 +111,7 @@
 			</div>
 		</div>
 	</div>
+	 --%>
 	
 	<%-- 댓글 수정/삭제(작성자 본인과 관리자만 수정/삭제 가능하게끔) --%>
 	

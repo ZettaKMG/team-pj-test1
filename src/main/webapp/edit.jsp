@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="tag" tagdir="/WEB-INF/tags"%>
+<%@ taglib prefix="bank" tagdir="/WEB-INF/tags"%>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 
 <!DOCTYPE html>
@@ -13,18 +13,30 @@
 <script	src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"	referrerpolicy="no-referrer"></script>
 <script	src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 	
+<script>
+	$(document).ready(function() {
+		$("#edit_button1").click(function() {
+				
+		});
+	});
+</script>	
+
 <title>상품수정 및 삭제 페이지</title>
 </head>
 <body>
-	<tag:navBar></tag:navBar>
+	<bank:navBar></bank:navBar>
 
 	<div class="container">
-		<div class="mt-5 mb-3">
-			<label for="productName" class="form-label"><h4>상품명</h4></label>
+		<!-- 편집버튼(권한 있는 유저에게만 보이게끔) -->
+    	<div class="mt-3 d-grid gap-2 d-md-flex justify-content-md-end">
+		  <button id="edit_button1" type="button" class="btn btn-warning">편집하기</button>			
+		</div>
+		<div class="mt-3 mb-3">
+			<label for="productName" class="form-label"><h4>상품명</h4></label>			
 	  		<input type="text" class="form-control" id="productName" placeholder="000예금/000적금">
 		</div>
 	  	<div class="mt-1 mb-3">
-			<label for="productOverview" class="form-label"><h4>상품개요</h4></label>
+			<label for="productOverview" class="form-label"><h4>상품요약</h4></label>
 	  		<input type="text" class="form-control" id="productOverview" placeholder="~~~를 위한 예금">
 		</div>
 	    <div class="mt-3">
